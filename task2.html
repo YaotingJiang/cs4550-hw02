@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Dev Assignment02 Task 1 Part B</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+<div class="main-container" id="container">
+  <h1 id="heading">10</h1>
+  <button id="alert" type="button">Alert</button>
+  <button id="increment" type="button" >Increment</button>
+  <button id="appends" type="button" >Appends</button>
+</div>
+</body>
+
+<script type="text/javascript">
+  var x = document.getElementById("heading").innerHTML;
+
+  document.getElementById("alert").onclick = displayAlert;
+  document.getElementById("increment").onclick = incrementNum;
+  document.getElementById("appends").onclick = appendParagrah;
+
+  function displayAlert() {
+    alert(x);
+  }
+
+  function incrementNum() {
+    x++;
+    document.getElementById("heading").innerHTML = x;
+  }
+
+  function appendParagrah() {
+    var paragraph = document.createElement("p");
+    var num = document.createTextNode(x);
+    paragraph.append(num);
+    document.getElementById("container").appendChild(paragraph);
+  }
+</script>
+</html>
